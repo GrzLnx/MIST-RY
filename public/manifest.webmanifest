@@ -1,0 +1,35 @@
+{
+    "name": "MIST RY",
+    "short_name": "MIST RY",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FFC800",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/images/icons/laravel-blueprint-pwa-icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/laravel-blueprint-pwa-icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icons/laravel-blueprint-pwa-icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/images/icons/laravel-blueprint-pwa-icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+/******
+* INCLUDES OF DEFAULT FOLDER
+******/
+@import "default/fontawesome";
+@import "default/fontawesome-light.css";
+@import "default/fontawesome-regular.css";
+@import "default/fontawesome-solid.css";
+@import "default/fontawesome-brands.css";
+@import "default/fontawesome-duotone.css";
+
+@import "default/reset";
+@import "default/variables";
+@import "default/mixins";
+@import "default/buttons";
+@import "default/typo";
+@import "default/layout";
+@import "default/form";
+@import "default/custom-elements";
+
+/******
+* INCLUDES OF OBJECTS FOLDER
+******/
+
+@import "objects/object-classes";
+@import "objects/textblocks/textblock-standard";
+@import "objects/menus/nav-standard";
+@import "objects/menus/nav-icons";
+@import "objects/forms/form-standard";
+
+/******
+* INCLUDES OF CUSTOM FOLDER
+******/
+@import "custom/custom-style";

@@ -1,0 +1,199 @@
+/* Including fonts */
+@font-face {
+    font-family: 'Poor Richard';
+    font-weight: normal;
+    font-style: normal;
+    src: url( '/fonts/poorrich.ttf' );
+}
+
+/* Default typo styling */
+
+html {
+    font-family: var( --font-family--default );
+    font-size: var( --font-size--default );
+    font-weight: var( --font-weight--default );
+    line-height: var( --font-line-height--default );
+    color: var( --color-text--default );
+}
+
+body {
+    font-size: var( --font-size--text );
+}
+
+/* Styling for the titles */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var( --color-title--default );
+    font-family: var( --font-family--title );
+    font-weight: var( --font-weight--regular );
+    text-transform: uppercase;
+    word-break: break-word;
+}
+
+h1 {
+    font-size: var( --font-size--h1 );
+    line-height: var( --font-line-height--h1 );
+    margin-bottom: var( --space-title--h1 );
+}
+h2 {
+    font-size: var( --font-size--h2 );
+    line-height: var( --font-line-height--h2 );
+    margin-bottom: var( --space-title--h2 );
+}
+h3 {
+    font-size: var( --font-size--h3 );
+    line-height: var( --font-line-height--h3 );
+    margin-bottom: var( --space-title--h3 );
+}
+h4 {
+    font-size: var( --font-size--h4 );
+    line-height: var( --font-line-height--h4 );
+    margin-bottom: var( --space-title--h4 );
+}
+h5 {
+    font-size: var( --font-size--h5 );
+    line-height: var( --font-line-height--h5 );
+    margin-bottom: var( --space-title--h5 );
+}
+h6 {
+    font-size: var( --font-size--h6 );
+    line-height: var( --font-line-height--h6 );
+    margin-bottom: var( --space-title--h6 );
+}
+
+/* Styling for the paragraphs */
+
+p {
+    margin-bottom: var( --space-text--p );
+    font-size: var( --font-size--p );
+    line-height: var( --font-line-height--p );
+}
+
+/* Styling for the unordered & ordered lists */
+
+ul, ol {
+
+    li {
+
+    }
+}
+
+ul {
+
+    li {
+
+    }
+}
+
+ol {
+    li {
+
+    }
+}
+
+li {
+
+}
+
+.list--bullets {
+    li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 5px 0;
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 7px;
+            width: 7px;
+            margin-right: 7px;
+            background-color: currentColor;
+            border-radius: 50%;
+        }
+    }
+}
+.list--check-marks {
+    li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 5px 0;
+        &::before {
+            content: "\E934";
+            display: inline-block;
+            margin-right: 7px;
+            font-family: "LinearIcons", sans-serif;
+            font-size: 16px;
+        }
+    }
+}
+.list--cross-marks {
+    li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 5px 0;
+        &::before {
+            content: "\E935";
+            display: inline-block;
+            margin-right: 7px;
+            font-family: "LinearIcons", sans-serif;
+            font-size: 16px;
+        }
+    }
+}
+.list--numbers {
+    list-style-type: decimal;
+    list-style-position: inside;
+    li {
+        margin: 5px 0;
+    }
+}
+.list--roman-numbers {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+    li {
+        margin: 5px 0;
+    }
+}
+.list--arrows {
+    li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 5px 0;
+        &::before {
+            content: "\E944";
+            display: inline-block;
+            margin-right: 7px;
+            font-family: "LinearIcons", sans-serif;
+            font-size: 16px;
+        }
+    }
+}
+
+/* Styling for bold text */
+
+b, strong {
+    font-weight: var( --font-weight--bold );
+}
+
+/* Styling for the links */
+
+a:not( .button ) {
+    color: var( --color-link--default );
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+    &:visited {
+        color: var( --color-link--visited );
+    }
+    &:hover {
+        color: var( --color-link--hover );
+    }
+    &:focus {
+        color: var( --color-link--focus );
+    }
+    &:active {
+        color: var( --color-link--active );
+    }
+}

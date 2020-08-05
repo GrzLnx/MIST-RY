@@ -1,0 +1,143 @@
+html {
+    background-color: var( --color-background--default );
+}
+
+body {
+}
+
+header {
+}
+aside {
+}
+main {
+}
+
+section {
+    --section--background-color: var( --color-background--default );
+    padding: 100px 50px 60px;
+    @include screen-size( "tablet", "max" ) {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    @include screen-size( "mobile", "max" ) {
+        padding: 50px 0 15px;
+    }
+}
+
+section[data-section-background] {
+    color: var(--color-text--default);
+    background-color: var( --section--background-color );
+    @include form-colors();
+}
+section[data-section-background="color-accent--first"] {
+    --section--background-color: var( --color-background--first-accent );
+}
+section[data-section-background="color-accent--second"] {
+    --section--background-color: var( --color-background--second-accent );
+    @include second-accent-colors();
+    @include second-accent-form-colors();
+}
+section[data-section-background="color-accent--third"] {
+    --section--background-color: var( --color-background--third-accent );
+    @include third-accent-colors();
+    @include third-accent-form-colors();
+}
+section[data-section-background="color-accent--fourth"] {
+    --section--background-color: var( --color-background--fourth-accent );
+    @include fourth-accent-colors();
+    @include fourth-accent-form-colors();
+}
+section[data-section-background="color-accent--fifth"] {
+    --section--background-color: var( --color-background--fifth-accent );
+    @include fifth-accent-colors();
+    @include fifth-accent-form-colors();
+}
+
+.grid-parent {
+    display: grid;
+    grid-template-columns: repeat( 12, 1fr );
+    align-items: start;
+    justify-items: start;
+    align-content: start;
+}
+
+.grid-child {
+    display: inline-grid;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0 25px;
+    grid-column: span 12;
+    grid-row: span 1;
+    @include screen-size( "small-mobile", "max" ) {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+.grid-child {
+    &--1 { grid-column: span 1; }
+    &--2 { grid-column: span 2; }
+    &--third, &--3 { grid-column: span 3; }
+    &--4 { grid-column: span 4; }
+    &--5 { grid-column: span 5; }
+    &--half, &--6 { grid-column: span 6; }
+    &--7 { grid-column: span 7; }
+    &--8 { grid-column: span 8; }
+    &--9 { grid-column: span 9; }
+    &--10 { grid-column: span 10; }
+    &--11 { grid-column: span 11; }
+    @include screen-size( "desktop" ) {
+        &--d-1 { grid-column: span 1; }
+        &--d-2 { grid-column: span 2; }
+        &--d-third, &--d-3 { grid-column: span 3; }
+        &--d-4 { grid-column: span 4; }
+        &--d-5 { grid-column: span 5; }
+        &--d-half, &--d-6 { grid-column: span 6; }
+        &--d-7 { grid-column: span 7; }
+        &--d-8 { grid-column: span 8; }
+        &--d-9 { grid-column: span 9; }
+        &--d-10 { grid-column: span 10; }
+        &--d-11 { grid-column: span 11; }
+    }
+    @include screen-size( "tablet" ) {
+        &--t-1 { grid-column: span 1; }
+        &--t-2 { grid-column: span 2; }
+        &--t-third, &--t-3 { grid-column: span 3; }
+        &--t-4 { grid-column: span 4; }
+        &--t-5 { grid-column: span 5; }
+        &--t-half, &--t-6 { grid-column: span 6; }
+        &--t-7 { grid-column: span 7; }
+        &--t-8 { grid-column: span 8; }
+        &--t-9 { grid-column: span 9; }
+        &--t-10 { grid-column: span 10; }
+        &--t-11 { grid-column: span 11; }
+    }
+    @include screen-size( "mobile" ) {
+        &--m-1 { grid-column: span 1; }
+        &--m-2 { grid-column: span 2; }
+        &--m-third, &--m-3 { grid-column: span 3; }
+        &--m-4 { grid-column: span 4; }
+        &--m-5 { grid-column: span 5; }
+        &--m-half, &--m-6 { grid-column: span 6; }
+        &--m-7 { grid-column: span 7; }
+        &--m-8 { grid-column: span 8; }
+        &--m-9 { grid-column: span 9; }
+        &--m-10 { grid-column: span 10; }
+        &--m-11 { grid-column: span 11; }
+    }
+}
+
+.section--full-height {
+    height: 100%;
+}
+.section--x-center {
+    justify-content: center;
+}
+.section--y-center {
+    align-items: center;
+}
+
+#section--header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
