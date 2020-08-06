@@ -2,7 +2,7 @@
 
     position: relative;
     display: inline-flex;
-    font-family: var( --font-family--default );
+    font-family: "Poor Richard", sans-serif;
     font-size: var( --font-size--text );
     font-weight: var( --font-weight--default );
     line-height: calc( 22 / 19 );
@@ -17,6 +17,7 @@
     appearance: none;
     box-sizing: border-box;
     overflow: hidden;
+    text-transform: uppercase;
     &::after {
         content: "";
         position: absolute;

@@ -93,6 +93,7 @@
         border-radius: 2px;
         transition: opacity .1s ease-in-out, visibility .1s ease-in-out;
         box-sizing: border-box;
+        z-index: 5;
         strong {
             display: inline-block;
             margin-bottom: 5px;

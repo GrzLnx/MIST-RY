@@ -175,3 +175,48 @@ header, footer {
     }
 
 }
+
+.social-media-standard {
+    display: flex;
+    flex-wrap: wrap;
+
+    > h4 {
+        width: 100%;
+    }
+
+    li {
+        margin-right: 10px;
+    }
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        color: var( --color--white );
+        background-color: var( --color-accent--second );
+    }
+
+}
+
+#form-contact {
+    grid-template-areas:
+        "a b" "c b";
+    grid-column-gap: 20px;
+}
+
+#form-contact-question {
+    height: calc(100% - 20px - var(--form-field--label-height));
+}
+
+.field--grid-a {
+    grid-area: a;
+}
+
+.field--grid-b {
+    grid-area: b;
+}
+
+.field--grid-c {
+    grid-area: c;
+}

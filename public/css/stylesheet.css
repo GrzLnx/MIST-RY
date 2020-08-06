@@ -15088,10 +15088,10 @@ html[data-spaces] {
 /* Variables for the forms */
 
 html[data-form][data-theme] {
-  --form-border--color-default: var(--color-border--first);
-  --form-border--color-hover: var(--color-accent--first);
-  --form-border--color-active: var(--color-accent--first);
-  --form-border--color-focus: var(--color-accent--first);
+  --form-border--color-default: var(--color--white);
+  --form-border--color-hover: var(--color--white);
+  --form-border--color-active: var(--color--white);
+  --form-border--color-focus: var(--color--white);
   --form-border--color-success: #8CF258;
   --form-status--background-color: #F6F6F6;
   --form-status--color: #333333;
@@ -15109,7 +15109,7 @@ html[data-form] {
   --form-label--margin-bottom: 10px;
   --form-outline--color-default: rgba(243, 233, 220, 0.15);
   --form-outline--size: 2px;
-  --form-background--default: transparent;
+  --form-background--default: var(--color--white);
 }
 
 /* Variables for the font */
@@ -15147,7 +15147,7 @@ input[type=button],
 input[type=submit] {
   position: relative;
   display: inline-flex;
-  font-family: var(--font-family--default);
+  font-family: "Poor Richard", sans-serif;
   font-size: var(--font-size--text);
   font-weight: var(--font-weight--default);
   line-height: calc( 22 / 19 );
@@ -15162,6 +15162,7 @@ input[type=submit] {
   appearance: none;
   box-sizing: border-box;
   overflow: hidden;
+  text-transform: uppercase;
   background-color: var(--color-accent--first);
   color: var(--color--white);
 }
@@ -15250,7 +15251,7 @@ p + p > input[type=submit] {
 .button {
   position: relative;
   display: inline-flex;
-  font-family: var(--font-family--default);
+  font-family: "Poor Richard", sans-serif;
   font-size: var(--font-size--text);
   font-weight: var(--font-weight--default);
   line-height: calc( 22 / 19 );
@@ -15265,6 +15266,7 @@ p + p > input[type=submit] {
   appearance: none;
   box-sizing: border-box;
   overflow: hidden;
+  text-transform: uppercase;
 }
 
 .button::after {
@@ -15588,7 +15590,7 @@ section[data-section-background] {
   --form-label--margin-bottom: 10px;
   --form-outline--color-default: rgba(243, 233, 220, 0.15);
   --form-outline--size: 2px;
-  --form-background--default: transparent;
+  --form-background--default: var(--color--white);
 }
 
 section[data-section-background=color-accent--first] {
@@ -15639,10 +15641,10 @@ section[data-section-background=color-accent--second] {
   --color-link--hover: #F3E9DC;
   --color-link--focus: #F3E9DC;
   --color-link--active: #F3E9DC;
-  --form-border--color-default: var(--color-border--first);
-  --form-border--color-hover: var(--color-accent--first);
-  --form-border--color-active: var(--color-accent--first);
-  --form-border--color-focus: var(--color-accent--first);
+  --form-border--color-default: var(--color--white);
+  --form-border--color-hover: var(--color--white);
+  --form-border--color-active: var(--color--white);
+  --form-border--color-focus: var(--color--white);
   --form-border--color-success: #8CF258;
   --form-border--color-default: #164b62;
 }
@@ -15686,10 +15688,10 @@ section[data-section-background=color-accent--third] {
   --color-link--visited: #FF8427;
   --color-link--focus: #FF8427;
   --color-link--active: #FF8427;
-  --form-border--color-default: var(--color-border--first);
-  --form-border--color-hover: var(--color-accent--first);
-  --form-border--color-active: var(--color-accent--first);
-  --form-border--color-focus: var(--color-accent--first);
+  --form-border--color-default: var(--color--white);
+  --form-border--color-hover: var(--color--white);
+  --form-border--color-active: var(--color--white);
+  --form-border--color-focus: var(--color--white);
   --form-border--color-success: #8CF258;
   --form-border--color-default: #d9aa00;
 }
@@ -15729,10 +15731,10 @@ section[data-section-background=color-accent--fourth] {
   --color-background--third-accent: #FFC800;
   --color-background--fourth-accent: #FF8427;
   --color-background--fifth-accent: #FFFFFF;
-  --form-border--color-default: var(--color-border--first);
-  --form-border--color-hover: var(--color-accent--first);
-  --form-border--color-active: var(--color-accent--first);
-  --form-border--color-focus: var(--color-accent--first);
+  --form-border--color-default: var(--color--white);
+  --form-border--color-hover: var(--color--white);
+  --form-border--color-active: var(--color--white);
+  --form-border--color-focus: var(--color--white);
   --form-border--color-success: #8CF258;
   --form-border--color-default: #e66300;
 }
@@ -15772,10 +15774,10 @@ section[data-section-background=color-accent--fifth] {
   --color-background--third-accent: #FFC800;
   --color-background--fourth-accent: #FF8427;
   --color-background--fifth-accent: #FFFFFF;
-  --form-border--color-default: var(--color-border--first);
-  --form-border--color-hover: var(--color-accent--first);
-  --form-border--color-active: var(--color-accent--first);
-  --form-border--color-focus: var(--color-accent--first);
+  --form-border--color-default: var(--color--white);
+  --form-border--color-hover: var(--color--white);
+  --form-border--color-active: var(--color--white);
+  --form-border--color-focus: var(--color--white);
   --form-border--color-success: #8CF258;
 }
 
@@ -16161,6 +16163,7 @@ legend {
   font-size: var(--form-label--font-size);
   font-weight: var(--form-label--font-weight);
   color: var(--form-label--color-default);
+  font-family: "Poor Richard", sans-serif;
   text-transform: uppercase;
 }
 
@@ -16893,7 +16896,7 @@ hold-line {
   --form-label--margin-bottom: 10px;
   --form-outline--color-default: rgba(243, 233, 220, 0.15);
   --form-outline--size: 2px;
-  --form-background--default: transparent;
+  --form-background--default: var(--color--white);
 }
 
 .object-background-color--first-accent {
@@ -16982,10 +16985,10 @@ hold-line {
   --color-link--hover: #F3E9DC;
   --color-link--focus: #F3E9DC;
   --color-link--active: #F3E9DC;
-  --form-border--color-default: var(--color-border--first);
-  --form-border--color-hover: var(--color-accent--first);
-  --form-border--color-active: var(--color-accent--first);
-  --form-border--color-focus: var(--color-accent--first);
+  --form-border--color-default: var(--color--white);
+  --form-border--color-hover: var(--color--white);
+  --form-border--color-active: var(--color--white);
+  --form-border--color-focus: var(--color--white);
   --form-border--color-success: #8CF258;
   --form-border--color-default: #164b62;
 }
@@ -17029,10 +17032,10 @@ hold-line {
   --color-link--visited: #FF8427;
   --color-link--focus: #FF8427;
   --color-link--active: #FF8427;
-  --form-border--color-default: var(--color-border--first);
-  --form-border--color-hover: var(--color-accent--first);
-  --form-border--color-active: var(--color-accent--first);
-  --form-border--color-focus: var(--color-accent--first);
+  --form-border--color-default: var(--color--white);
+  --form-border--color-hover: var(--color--white);
+  --form-border--color-active: var(--color--white);
+  --form-border--color-focus: var(--color--white);
   --form-border--color-success: #8CF258;
   --form-border--color-default: #d9aa00;
 }
@@ -17072,10 +17075,10 @@ hold-line {
   --color-background--third-accent: #FFC800;
   --color-background--fourth-accent: #FF8427;
   --color-background--fifth-accent: #FFFFFF;
-  --form-border--color-default: var(--color-border--first);
-  --form-border--color-hover: var(--color-accent--first);
-  --form-border--color-active: var(--color-accent--first);
-  --form-border--color-focus: var(--color-accent--first);
+  --form-border--color-default: var(--color--white);
+  --form-border--color-hover: var(--color--white);
+  --form-border--color-active: var(--color--white);
+  --form-border--color-focus: var(--color--white);
   --form-border--color-success: #8CF258;
   --form-border--color-default: #e66300;
 }
@@ -17115,10 +17118,10 @@ hold-line {
   --color-background--third-accent: #FFC800;
   --color-background--fourth-accent: #FF8427;
   --color-background--fifth-accent: #FFFFFF;
-  --form-border--color-default: var(--color-border--first);
-  --form-border--color-hover: var(--color-accent--first);
-  --form-border--color-active: var(--color-accent--first);
-  --form-border--color-focus: var(--color-accent--first);
+  --form-border--color-default: var(--color--white);
+  --form-border--color-hover: var(--color--white);
+  --form-border--color-active: var(--color--white);
+  --form-border--color-focus: var(--color--white);
   --form-border--color-success: #8CF258;
 }
 
@@ -17230,6 +17233,7 @@ hold-line {
   border-radius: 2px;
   transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
   box-sizing: border-box;
+  z-index: 5;
 }
 
 .form-standard__status-holder-tooltip strong {
@@ -17519,10 +17523,10 @@ footer {
   --color-link--hover: #F3E9DC;
   --color-link--focus: #F3E9DC;
   --color-link--active: #F3E9DC;
-  --form-border--color-default: var(--color-border--first);
-  --form-border--color-hover: var(--color-accent--first);
-  --form-border--color-active: var(--color-accent--first);
-  --form-border--color-focus: var(--color-accent--first);
+  --form-border--color-default: var(--color--white);
+  --form-border--color-hover: var(--color--white);
+  --form-border--color-active: var(--color--white);
+  --form-border--color-focus: var(--color--white);
   --form-border--color-success: #8CF258;
   --form-border--color-default: #164b62;
   background-color: var(--color-background--second-accent);
@@ -17530,5 +17534,49 @@ footer {
 
 .projects-standard--completed article {
   grid-column: span 6;
+}
+
+.social-media-standard {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-media-standard > h4 {
+  width: 100%;
+}
+
+.social-media-standard li {
+  margin-right: 10px;
+}
+
+.social-media-standard a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: var(--color--white);
+  background-color: var(--color-accent--second);
+}
+
+#form-contact {
+  grid-template-areas: "a b" "c b";
+  grid-column-gap: 20px;
+}
+
+#form-contact-question {
+  height: calc(100% - 20px - var(--form-field--label-height));
+}
+
+.field--grid-a {
+  grid-area: a;
+}
+
+.field--grid-b {
+  grid-area: b;
+}
+
+.field--grid-c {
+  grid-area: c;
 }
 

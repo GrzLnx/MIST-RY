@@ -168,11 +168,11 @@ $space-text: (
 
 /* Variables for the forms */
 $form-border: (
-    color-default:                      var( --color-border--first ),
-    color-hover:                        var( --color-accent--first ),
-    color-active:                       var( --color-accent--first ),
-    color-focus:                        var( --color-accent--first ),
-    color-disabled:                     var( --color-border--first ),
+    color-default:                      var( --color--white ),
+    color-hover:                        var( --color--white ),
+    color-active:                       var( --color--white ),
+    color-focus:                        var( --color--white ),
+    color-disabled:                     var( --color--white ),
     color-success:                      map-get( $color-status, success ),
     color-error:                        map-get( $color-status, error ),
     size:                               1px,
@@ -210,7 +210,7 @@ $form-outline: (
 );
 
 $form-background: (
-    default:                            transparent
+    default:                            var( --color--white )
 );
 
 /* Variables for the fonts */
