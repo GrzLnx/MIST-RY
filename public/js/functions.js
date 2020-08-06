@@ -28,21 +28,18 @@ function createStandardCSSVariables() {
     changeVar( 'js--screen-height', window.innerHeight + 'px' );
 }
 
-function toggleTheme() {
-    const html_el = document.getElementsByTagName( 'html' )[0];
-    const currentTheme = html_el.getAttribute( 'data-theme' );
-    if( currentTheme === 'light' ) {
-        html_el.setAttribute( 'data-theme', 'dark' );
-    } else {
-        html_el.setAttribute( 'data-theme', 'light' );
-    }
-    return true;
+function addFixedHeaderSpacing() {
+    const header = document.getElementsByTagName( 'header' )[0];
+    const main = document.getElementsByTagName( 'main' )[0];
+    const headerHeight = header.offsetHeight;
+    main.style.marginTop = headerHeight + 'px';
 }
 
 /** Executing the functions **/
 
 /* Code to be executed when the site is loaded. */
 function executeOnLoad() {
+    addFixedHeaderSpacing();
     createStandardCSSVariables();
 }
 function executeOnScroll() {

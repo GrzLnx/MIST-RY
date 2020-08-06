@@ -31,14 +31,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+    position: relative;
     font-size: var( --font-size--h1 );
     line-height: var( --font-line-height--h1 );
     margin-bottom: var( --space-title--h1 );
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -14px;
+        width: 140px;
+        height: 4px;
+        background-color: var( --color-accent--second );
+    }
 }
 h2 {
+    position: relative;
+    padding-left: 22px;
     font-size: var( --font-size--h2 );
     line-height: var( --font-line-height--h2 );
     margin-bottom: var( --space-title--h2 );
+    &::before, &::after {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 42px;
+        margin-top: 6px;
+        background-color: var( --color-accent--second );
+    }
+    &::before {
+        left: 0px;
+    }
+    &::after {
+        left: 8px;
+    }
 }
 h3 {
     font-size: var( --font-size--h3 );

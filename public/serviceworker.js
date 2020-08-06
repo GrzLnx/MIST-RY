@@ -1,4 +1,4 @@
-const useCachedFiles = true;
+const useCachedFiles = false;
 
 const staticCachePagesName = 'static-pages-01';
 const staticCachePages = [

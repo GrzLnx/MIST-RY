@@ -155,8 +155,8 @@ $space-layout: (
 );
 
 $space-title: (
-    h1:                                 25px,
-    h2:                                 25px,
+    h1:                                 50px,
+    h2:                                 40px,
     h3:                                 25px,
     h4:                                 10px,
     h5:                                 10px,
@@ -237,12 +237,12 @@ $font-line-height: (
     default:                            1.5,
     text:                               1.5,
     p:                                  1.5,
-    h1:                                 1.1,
-    h2:                                 1.1,
-    h3:                                 1.1,
-    h4:                                 1.2,
-    h5:                                 1.2,
-    h6:                                 1.3
+    h1:                                 1.5,
+    h2:                                 1.5,
+    h3:                                 1.5,
+    h4:                                 1.5,
+    h5:                                 1.5,
+    h6:                                 1.5
 );
 
 $font-weight: (
@@ -357,6 +357,7 @@ html[data-layout] {
     @include light-colors();
     --color-accent--second:             #{ map-get( $color-white, default ) };
     --color-text--default:              #{ map-get( $color-white, default ) };
+    --color-title--default:             #{ map-get( $color-white, default ) };
     --color-title--second:              #{ map-get( $color-white, default ) };
     --color-link--hover:                #{ map-get( $color-white, default ) };
     --color-link--focus:                #{ map-get( $color-white, default ) };

@@ -1,1 +1,119 @@
 /* Place for the custom style */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 5;
+}
+header, footer {
+    border-bottom: 2px solid #CFBDA6;
+}
+
+.divider {
+    position: relative;
+    width: 100%;
+    display: block;
+    height: calc(100vw * 0.01875);
+    padding: 0;
+    background: #CFBDA6;
+    overflow: hidden;
+}
+.divider::before {
+    position: relative;
+    top: -1px;
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    z-index: 1;
+}
+.divider::after {
+    position: absolute;
+    top: 1px;
+    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    z-index: 2;
+}
+.divider::before, .divider::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.divider--first-accent-to-white {
+    &::before {
+        background: #f3e9dc;
+    }
+    &::after {
+        background: white;
+    }
+}
+.divider--white-to-first-accent {
+    &::before {
+        background: white;
+    }
+    &::after {
+        background: #f3e9dc;
+    }
+}
+
+.articles-standard {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+
+    > h1 {
+        grid-column: span 9;
+    }
+
+    article {
+        grid-column: span 2;
+        background-color: white;
+        padding: 30px;
+        margin-right: 20px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            top: -15px;
+            transform: rotate(45deg);
+            background: #f3e9dc;
+            width: 30px;
+            height: 30px;
+            right: -15px;
+        }
+        h4 {
+            color: var(--color-accent--second);
+        }
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__offer-block {
+        position: relative;
+        grid-column: span 3;
+        padding: 30px;
+        margin-left: 20px;
+        margin-right: 0;
+        &::before {
+            position: absolute;
+            content: "";
+            top: -15px;
+            transform: rotate(45deg);
+            background: #f3e9dc;
+            width: 30px;
+            height: 30px;
+            right: -15px;
+        }
+        ul {
+            margin-top: 25px;
+            li {
+                border: 1px solid white;
+                padding: 10px 10px 0;
+                margin-top: 10px;
+                h5 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+}
