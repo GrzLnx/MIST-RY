@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
-use App\Project;
+use App\fm;
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class ProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +14,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::limit( 3 ) -> get();
-        $newProjects = Project::where( 'completed', 0 ) -> limit( 3 ) -> get();
-        $completedProjects = Project::where( 'completed', 1 ) -> limit( 2 ) -> get();
-
-        return view( 'welcome', compact( 'articles' ) ) -> with( 'newProjects', $newProjects ) -> with( 'completedProjects', $completedProjects );
+        //
     }
 
     /**
@@ -46,10 +41,10 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Article  $article
+     * @param  \App\fm  $fm
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show(fm $fm)
     {
         //
     }
@@ -57,10 +52,10 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Article  $article
+     * @param  \App\fm  $fm
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit(fm $fm)
     {
         //
     }
@@ -69,10 +64,10 @@ class ArticleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Article  $article
+     * @param  \App\fm  $fm
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, fm $fm)
     {
         //
     }
@@ -80,10 +75,10 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Article  $article
+     * @param  \App\fm  $fm
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy(fm $fm)
     {
         //
     }

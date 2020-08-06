@@ -12,10 +12,6 @@
                     <article>
                         <h4>{{ $article -> title }}</h4>
                         <p>{{ $article -> intro }}</p>
-                        <p>Imagine, you are inside a driving schoolbus, and suddenly, the bus stops. </p>
-                        <p>What do you do? You cry for help? You scream? Weird.</p>
-                        <p>See how you got drawn to thinking something was wrong? Even though a bus stops all the time. That is what they do, they drop people off and they pick people up.</p>
-                        <p>But in order to do that, they need to stop.</p>
                     </article>
                 @endforeach
                 <div class="articles-standard__offer-block object-background-color object-background-color--second-accent">
@@ -42,37 +38,26 @@
 
                 <h2>New projects</h2>
 
-                <article>
-                    <img src="/images/project-1.jpg" alt="Afbeelding voor project 1">
-                    <p>Lorem ipsum dolar sit amet</p>
-                    <h6><a href="">View project</a></h6>
-                </article>
-                <article>
-                    <img src="/images/project-2.jpg" alt="Afbeelding voor project 1">
-                    <p>Lorem ipsum dolar sit amet</p>
-                    <h6><a href="">View project</a></h6>
-                </article>
-                <article>
-                    <img src="/images/project-3.jpg" alt="Afbeelding voor project 1">
-                    <p>Lorem ipsum dolar sit amet</p>
-                    <h6><a href="">View project</a></h6>
-                </article>
+                @foreach( $newProjects as $project )
+                    <article>
+                        <img src="{{ $project -> image }}" alt="Afbeelding voor {{ $project -> title }}">
+                        <p>{{ $project -> intro }}</p>
+                        <h6><a href="">View project</a></h6>
+                    </article>
+                @endforeach
 
             </div>
             <div class="projects-standard projects-standard--completed grid-child grid-child--d-5">
 
                 <h2>Completed projects</h2>
 
-                <article>
-                    <img src="/images/project-2.jpg" alt="Afbeelding voor project 1">
-                    <p>Lorem ipsum dolar sit amet</p>
-                    <h6><a href="">View project</a></h6>
-                </article>
-                <article>
-                    <img src="/images/project-1.jpg" alt="Afbeelding voor project 1">
-                    <p>Lorem ipsum dolar sit amet</p>
-                    <h6><a href="">View project</a></h6>
-                </article>
+                @foreach( $completedProjects as $project )
+                    <article>
+                        <img src="{{ $project -> image }}" alt="Afbeelding voor {{ $project -> title }}">
+                        <p>{{ $project -> intro }}</p>
+                        <h6><a href="">View project</a></h6>
+                    </article>
+                @endforeach
 
             </div>
 
