@@ -58,6 +58,7 @@ header, footer {
 .articles-standard {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
+    grid-column-gap: 20px;
 
     > h1 {
         grid-column: span 9;
@@ -67,7 +68,6 @@ header, footer {
         grid-column: span 2;
         background-color: white;
         padding: 30px;
-        margin-right: 20px;
         position: relative;
         &::before {
             position: absolute;
@@ -93,6 +93,7 @@ header, footer {
         padding: 30px;
         margin-left: 20px;
         margin-right: 0;
+        width: calc(100% - 20px);
         &::before {
             position: absolute;
             content: "";
@@ -109,10 +110,67 @@ header, footer {
                 border: 1px solid white;
                 padding: 10px 10px 0;
                 margin-top: 10px;
+                cursor: pointer;
+                transition: background-color .1s ease-in-out;
                 h5 {
                     margin-bottom: 0;
                 }
+                &:hover {
+                    @include light-colors;
+                    background-color: white;
+                    h5, p {
+                        color: var( --color-accent--second );
+                    }
+                }
             }
+        }
+    }
+
+}
+
+.projects-standard {
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+
+    > h2 {
+        grid-column: span 12;
+    }
+
+    article {
+        grid-column: span 4;
+        background-color: var(--color-background--first-accent);
+        transition: background-color .1s ease-in-out;
+        img {
+            display: block;
+            max-width: 100%;
+            width: 200%;
+            min-height: 230px;
+            max-height: 230px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        p {
+            padding-left: 15px;
+            padding-right: 15px;
+            color: var( --color-text--default );
+            transition: color .1s ease-in-out;
+        }
+        h6 {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 15px;
+            transition: color .1s ease-in-out;
+        }
+        &:hover {
+            @include second-accent-colors();
+            @include second-accent-form-colors();
+            background-color: var(--color-background--second-accent);
+        }
+    }
+
+    &--completed {
+        article {
+            grid-column: span 6;
         }
     }
 

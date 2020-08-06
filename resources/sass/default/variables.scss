@@ -359,9 +359,11 @@ html[data-layout] {
     --color-text--default:              #{ map-get( $color-white, default ) };
     --color-title--default:             #{ map-get( $color-white, default ) };
     --color-title--second:              #{ map-get( $color-white, default ) };
-    --color-link--hover:                #{ map-get( $color-white, default ) };
-    --color-link--focus:                #{ map-get( $color-white, default ) };
-    --color-link--active:               #{ map-get( $color-white, default ) };
+    --color-link--default:              #{ map-get( $color-white, default ) };
+    --color-link--visited:              #{ map-get( $color-white, default ) };
+    --color-link--hover:                #{ map-get( $color-accent, first ) };
+    --color-link--focus:                #{ map-get( $color-accent, first ) };
+    --color-link--active:               #{ map-get( $color-accent, first ) };
 }
 @mixin third-accent-colors() {
     @include light-colors();

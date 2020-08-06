@@ -15565,14 +15565,7 @@ html {
 
 section {
   --section--background-color: var( --color-background--default );
-  padding: 100px 50px 60px;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  section {
-    padding-right: 25px;
-    padding-left: 25px;
-  }
+  padding: 100px 25px 60px;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -15641,9 +15634,11 @@ section[data-section-background=color-accent--second] {
   --color-text--default: #FFFFFF;
   --color-title--default: #FFFFFF;
   --color-title--second: #FFFFFF;
-  --color-link--hover: #FFFFFF;
-  --color-link--focus: #FFFFFF;
-  --color-link--active: #FFFFFF;
+  --color-link--default: #FFFFFF;
+  --color-link--visited: #FFFFFF;
+  --color-link--hover: #F3E9DC;
+  --color-link--focus: #F3E9DC;
+  --color-link--active: #F3E9DC;
   --form-border--color-default: var(--color-border--first);
   --form-border--color-hover: var(--color-accent--first);
   --form-border--color-active: var(--color-accent--first);
@@ -16982,9 +16977,11 @@ hold-line {
   --color-text--default: #FFFFFF;
   --color-title--default: #FFFFFF;
   --color-title--second: #FFFFFF;
-  --color-link--hover: #FFFFFF;
-  --color-link--focus: #FFFFFF;
-  --color-link--active: #FFFFFF;
+  --color-link--default: #FFFFFF;
+  --color-link--visited: #FFFFFF;
+  --color-link--hover: #F3E9DC;
+  --color-link--focus: #F3E9DC;
+  --color-link--active: #F3E9DC;
   --form-border--color-default: var(--color-border--first);
   --form-border--color-hover: var(--color-accent--first);
   --form-border--color-active: var(--color-accent--first);
@@ -17328,6 +17325,7 @@ footer {
 .articles-standard {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
+  grid-column-gap: 20px;
 }
 
 .articles-standard > h1 {
@@ -17338,7 +17336,6 @@ footer {
   grid-column: span 2;
   background-color: white;
   padding: 30px;
-  margin-right: 20px;
   position: relative;
 }
 
@@ -17367,6 +17364,7 @@ footer {
   padding: 30px;
   margin-left: 20px;
   margin-right: 0;
+  width: calc(100% - 20px);
 }
 
 .articles-standard__offer-block::before {
@@ -17388,9 +17386,149 @@ footer {
   border: 1px solid white;
   padding: 10px 10px 0;
   margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
 }
 
 .articles-standard__offer-block ul li h5 {
   margin-bottom: 0;
+}
+
+.articles-standard__offer-block ul li:hover {
+  --color-accent--first: #F3E9DC;
+  --color-accent--second: #247BA0;
+  --color-accent--third: #FFC800;
+  --color-accent--fourth: #FF8427;
+  --color-accent--fifth: #FFFFFF;
+  --color-text--default: #011627;
+  --color-text--first: #111111;
+  --color-text--second: #242323;
+  --color-text--third: #333333;
+  --color-text--white: #FFFFFF;
+  --color-text--black: #000000;
+  --color-title--default: #011627;
+  --color-title--first: #F3E9DC;
+  --color-title--second: #247BA0;
+  --color-title--third: #FFC800;
+  --color-link--default: #011627;
+  --color-link--visited: #011627;
+  --color-link--hover: #247BA0;
+  --color-link--focus: #247BA0;
+  --color-link--active: #247BA0;
+  --color-border--first: #E4E5E5;
+  --color-border--second: #333333;
+  --color-border--third: #D3D3D3;
+  --color-border--white: #FFFFFF;
+  --color-border--black: #000000;
+  --color-background--default: #FFFFFF;
+  --color-background--light: #F6F6F6;
+  --color-background--dark: #111111;
+  --color-background--first-accent: #F3E9DC;
+  --color-background--second-accent: #247BA0;
+  --color-background--third-accent: #FFC800;
+  --color-background--fourth-accent: #FF8427;
+  --color-background--fifth-accent: #FFFFFF;
+  background-color: white;
+}
+
+.articles-standard__offer-block ul li:hover h5,
+.articles-standard__offer-block ul li:hover p {
+  color: var(--color-accent--second);
+}
+
+.projects-standard {
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+}
+
+.projects-standard > h2 {
+  grid-column: span 12;
+}
+
+.projects-standard article {
+  grid-column: span 4;
+  background-color: var(--color-background--first-accent);
+  transition: background-color 0.1s ease-in-out;
+}
+
+.projects-standard article img {
+  display: block;
+  max-width: 100%;
+  width: 200%;
+  min-height: 230px;
+  max-height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.projects-standard article p {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: var(--color-text--default);
+  transition: color 0.1s ease-in-out;
+}
+
+.projects-standard article h6 {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+  transition: color 0.1s ease-in-out;
+}
+
+.projects-standard article:hover {
+  --color-accent--first: #F3E9DC;
+  --color-accent--second: #247BA0;
+  --color-accent--third: #FFC800;
+  --color-accent--fourth: #FF8427;
+  --color-accent--fifth: #FFFFFF;
+  --color-text--default: #011627;
+  --color-text--first: #111111;
+  --color-text--second: #242323;
+  --color-text--third: #333333;
+  --color-text--white: #FFFFFF;
+  --color-text--black: #000000;
+  --color-title--default: #011627;
+  --color-title--first: #F3E9DC;
+  --color-title--second: #247BA0;
+  --color-title--third: #FFC800;
+  --color-link--default: #011627;
+  --color-link--visited: #011627;
+  --color-link--hover: #247BA0;
+  --color-link--focus: #247BA0;
+  --color-link--active: #247BA0;
+  --color-border--first: #E4E5E5;
+  --color-border--second: #333333;
+  --color-border--third: #D3D3D3;
+  --color-border--white: #FFFFFF;
+  --color-border--black: #000000;
+  --color-background--default: #FFFFFF;
+  --color-background--light: #F6F6F6;
+  --color-background--dark: #111111;
+  --color-background--first-accent: #F3E9DC;
+  --color-background--second-accent: #247BA0;
+  --color-background--third-accent: #FFC800;
+  --color-background--fourth-accent: #FF8427;
+  --color-background--fifth-accent: #FFFFFF;
+  --color-accent--second: #FFFFFF;
+  --color-text--default: #FFFFFF;
+  --color-title--default: #FFFFFF;
+  --color-title--second: #FFFFFF;
+  --color-link--default: #FFFFFF;
+  --color-link--visited: #FFFFFF;
+  --color-link--hover: #F3E9DC;
+  --color-link--focus: #F3E9DC;
+  --color-link--active: #F3E9DC;
+  --form-border--color-default: var(--color-border--first);
+  --form-border--color-hover: var(--color-accent--first);
+  --form-border--color-active: var(--color-accent--first);
+  --form-border--color-focus: var(--color-accent--first);
+  --form-border--color-success: #8CF258;
+  --form-border--color-default: #164b62;
+  background-color: var(--color-background--second-accent);
+}
+
+.projects-standard--completed article {
+  grid-column: span 6;
 }
 

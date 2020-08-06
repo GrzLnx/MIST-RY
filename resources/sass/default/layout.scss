@@ -14,11 +14,7 @@ main {
 
 section {
     --section--background-color: var( --color-background--default );
-    padding: 100px 50px 60px;
-    @include screen-size( "tablet", "max" ) {
-        padding-right: 25px;
-        padding-left: 25px;
-    }
+    padding: 100px 25px 60px;
     @include screen-size( "mobile", "max" ) {
         padding: 50px 0 15px;
     }
