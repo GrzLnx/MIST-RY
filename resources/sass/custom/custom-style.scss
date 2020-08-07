@@ -201,7 +201,7 @@ header, footer {
 
 #form-contact {
     grid-template-areas:
-        "a b" "c b";
+        "d d" "a b" "c b";
     grid-column-gap: 20px;
 }
 
@@ -219,4 +219,8 @@ header, footer {
 
 .field--grid-c {
     grid-area: c;
+}
+
+.field--grid-d {
+    grid-area: d;
 }

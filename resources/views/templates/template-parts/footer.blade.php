@@ -14,6 +14,7 @@
         {{ $contactUsForm -> setFormFieldIDAddPrefix( true ) }}
         {{ $contactUsForm -> setFormAction( route( 'home' ) ) }}
         {{ $contactUsForm -> addCSRFField( csrf_token() ) }}
+        {{ $contactUsForm -> addHTML( '<h4 class="field--grid-d">Got a question?</h4>' ) }}
         {{ $contactUsForm -> addTextInputField( 'name', 'field--grid-a', '', 'name', '', old( 'name' ), '', 'name', true, __('Name'), 'required:true' ) }}
         {{ $contactUsForm -> addEmailInputField( 'email', 'field--grid-c', '', 'email', '', old( 'email' ), '', 'email', true, __('E-mailadres'), 'required:true;format:email;min-length:8;max-length:40' ) }}
         {{ $contactUsForm -> addTextareaField( 'question', 'field--grid-b', '', 'question', '', old( 'question' ), '', '', true, __('Question'), 'required:true' )}}
